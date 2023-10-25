@@ -36,8 +36,8 @@ namespace TApi.Controllers
             {
                 api.Authorize(new ApiAuthParams
                 {
-                    //Вставьте токен приложения! (зарегестрировать его можно со своей страницы вконтакте)
-                    AccessToken = "dfa8918bdfa8918bdfa8918b85dcb9f624ddfa8dfa8918bbcc4caf319b6d59d17813486"
+                    //Г‚Г±ГІГ ГўГјГІГҐ ГІГ®ГЄГҐГ­ ГЇГ°ГЁГ«Г®Г¦ГҐГ­ГЁГї! (Г§Г Г°ГҐГЈГҐГ±ГІГ°ГЁГ°Г®ГўГ ГІГј ГҐГЈГ® Г¬Г®Г¦Г­Г® Г±Г® Г±ГўГ®ГҐГ© Г±ГІГ°Г Г­ГЁГ¶Г» ГўГЄГ®Г­ГІГ ГЄГІГҐ)
+                    AccessToken = ""
                 });
                 var dataUser = api.Users.Get(new long[] { id }).FirstOrDefault();
 
@@ -54,7 +54,7 @@ namespace TApi.Controllers
                 }
                 count = 0;
 
-                DataActions.LoadLogs($"Начался подсчет символов -- {DateTime.Now}");
+                DataActions.LoadLogs($"ГЌГ Г·Г Г«Г±Гї ГЇГ®Г¤Г±Г·ГҐГІ Г±ГЁГ¬ГўГ®Г«Г®Гў -- {DateTime.Now}");
                 foreach (string item in postTxt)
                 {
                     foreach (char c in item)
@@ -75,7 +75,7 @@ namespace TApi.Controllers
                     count++; 
                     letters.Clear();
                 }
-                DataActions.LoadLogs($"Закончился подсчет символов {DateTime.Now}");
+                DataActions.LoadLogs($"Г‡Г ГЄГ®Г­Г·ГЁГ«Г±Гї ГЇГ®Г¤Г±Г·ГҐГІ Г±ГЁГ¬ГўГ®Г«Г®Гў {DateTime.Now}");
 
                 using (ConnectionDataBase db = new ConnectionDataBase())
                 {
